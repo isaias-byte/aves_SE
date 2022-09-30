@@ -1,7 +1,7 @@
 aves = {
     'aguililla_cola_roja': {
         'ojos': ['negros', 'amarillos'],
-        'pico': ['gris', 'oscuro'],
+        'pico': ['gris', 'negro'],
         'antifaz': [],
         'frente': [],
         'loras': [],
@@ -21,7 +21,7 @@ aves = {
     },
     'cernicalo_americano': {
         'ojos': ['negros'],
-        'pico': ['gris', 'oscuro'],
+        'pico': ['gris', 'negro'],
         'antifaz': [],
         'frente': [],
         'loras': [],
@@ -41,7 +41,7 @@ aves = {
     },
     'chara_de_san_blas_adulto': {
         'ojos': ['negros'],
-        'pico': ['gris', 'oscuro'],
+        'pico': ['gris', 'negro'],
         'antifaz': [],
         'frente': [],
         'loras': [],
@@ -121,7 +121,7 @@ aves = {
     },
     'gavilan_pecho_rufo': {
         'ojos': ['rojos'],
-        'pico': ['gris', 'oscuro'],
+        'pico': ['gris', 'negro'],
         'antifaz': [],
         'frente': [],
         'loras': [],
@@ -241,7 +241,7 @@ aves = {
     },
     'tangara_capucha_roja': {
         'ojos': ['negros'],
-        'pico': ['oscuro'],
+        'pico': ['negro'],
         'antifaz': [],
         'frente': [],
         'loras': [],
