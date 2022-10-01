@@ -1,15 +1,4 @@
-from os import sep
 from aves import aves
-
-# ojos: negros (example)
-# loras: negras (example
-# nuca: naranja (example)
-# auriculares: grises
-# alas: rojas
-# cola: roja
-# patas: amarillas
-# rabadilla: amarilla
-# espalda: roja
 
 print('\n')
 print('------------------------------------------')
@@ -27,7 +16,6 @@ alas = input('Color de alas: ').lower()
 cola = input('Color de cola: ').lower()
 espalda = input('Color de espalda: ').lower()
 pecho = input('Color del pecho: ').lower()
-
 
 preguntas = {
     'ojos': ojos,
@@ -47,7 +35,7 @@ preguntas = {
 #     print('------------------------------')
 #     print('\n')
 
-# *Mostrar todo lo que capturó el usuario
+# Mostrar todo lo que capturó el usuario
 print('\n\nTu búsqueda fue la siguiente:')
 for clave, valor in preguntas.items():
     print(clave, ':', valor)
@@ -55,6 +43,7 @@ print('\n')
 
 avesResultado = list()
 
+# Búsqueda del ave
 for ave, contenido in aves.items():
     if (
         ((preguntas.get('ojos') in contenido.get('ojos')) or (preguntas.get('ojos') == 'x')) and
@@ -65,25 +54,23 @@ for ave, contenido in aves.items():
         ((preguntas.get('pecho') in contenido.get('pecho')) or (preguntas.get('pecho') == 'x'))
         ):
             avesResultado.append(ave)
-    
-if(len(avesResultado) == 1):
+
+# Posibles resultados
+if(len(avesResultado) == 1):   # Ave encontrada
     for ave, contenido in aves.items():
         if(avesResultado[0] == ave):
             print('La ave que buscas es:', ave)
             print('\nEsta ave tiene:\n')
             for caracteristica, valor in contenido.items():
-                print(caracteristica, ':', valor)
+                if(preguntas.__contains__(caracteristica) and preguntas.get(caracteristica) != 'x'):
+                    print(caracteristica, ':', ', '.join(valor))
             print('\n')
             break
-elif(len(avesResultado) == 0):
+elif(len(avesResultado) == 0):   # No se encontraron coincidencias
     print('No pudimos encontrar el ave que buscas :(\n')
-elif(len(avesResultado) > 1):
-    print('La ave que buscas puede ser una de estas:\n')
-    nombre = ''
+elif(len(avesResultado) > 1):   # Se encontró más de una coincidencia
+    print('La ave que buscas puede ser una de las siguientes:\n')
     for ave in avesResultado:
-        nombre_ave = ave.split(sep="_")
-        for nom_ave in nombre_ave:
-            nombre = nombre + " " + nom_ave.capitalize()
-        print(nombre)
-        nombre = ''
+        ave = ave.replace('_', ' ').title()
+        print(ave)
     print('\n')
