@@ -74,9 +74,20 @@ if(len(avesResultado) == 1):   # Ave encontrada
             ave = ave.replace('_', ' ').title()
             print('La ave que buscas es:', ave)
             descripcion = 'El ave ' + ave + ' se caracteriza por tener '
-            for caracteristica, valor in contenido.items():
+            for caracteristica, valor in contenido.items():     
                 if(preguntas.__contains__(caracteristica) and preguntas.get(caracteristica) != 'x' and preguntas.get(caracteristica) != ''):
-                    descripcion += caracteristica + ' color ' + ', '.join(valor) + ', '
+                    if len(valor) == 2:
+                        descripcion += caracteristica + ' color ' + ' y '.join(valor) + ', '
+                    elif len(valor) > 2:
+                        if valor[len(valor) - 1]:
+                            valorAux = ' y '.join(valor)
+                        else:
+                            valorAux = ', '.join(valor)
+
+                        descripcion += caracteristica + ' color ' + valorAux + ', '
+                        
+                    else: 
+                        descripcion += caracteristica + ' color ' + ', '.join(valor) + ', '
             descripcion = descripcion[:-2]
             descripcion += '.'
             print(descripcion)
