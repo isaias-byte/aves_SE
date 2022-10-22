@@ -70,26 +70,35 @@ for ave, contenido in aves.items():
 # Posibles resultados
 if(len(avesResultado) == 1):   # Ave encontrada
     for ave, contenido in aves.items():
-        if(avesResultado[0] == ave):
-            ave = ave.replace('_', ' ').title()
-            print('La ave que buscas es:', ave)
+        if(avesResultado[0] == ave):   # Obtener los datos del ave desde el diccionario
+            ave = ave.replace('_', ' ').title()   # Convertir el nombre del ave a mayúsculas y eliminar los guiones bajos
+            print('El ave que buscas es:', ave)
             descripcion = 'El ave ' + ave + ' se caracteriza por tener '
-            for caracteristica, valor in contenido.items():     
+            for caracteristica, valor in contenido.items():        # Obtener las características del ave
                 if(preguntas.__contains__(caracteristica) and preguntas.get(caracteristica) != 'x' and preguntas.get(caracteristica) != ''):
-                    if len(valor) == 2:
+                    colores = len(valor)   # Cantidad de colores en dicha característica
+                    if colores == 2:
                         descripcion += caracteristica + ' color ' + ' y '.join(valor) + ', '
-                    elif len(valor) > 2:
-                        if valor[len(valor) - 1]:
-                            valorAux = ' y '.join(valor)
-                        else:
-                            valorAux = ', '.join(valor)
+                    elif colores > 2:
+                        valorAux = ''
+                        for i, color in enumerate(valor):
+                            if i == colores - 1:
+                                valorAux += ' y ' + color
+                            else:
+                                if i == 0:
+                                    valorAux += color
+                                else:
+                                    valorAux += ', ' + color
 
                         descripcion += caracteristica + ' color ' + valorAux + ', '
+                    else:
+                        descripcion += caracteristica + ' color ' + valor[0] + ', '
                         
-                    else: 
-                        descripcion += caracteristica + ' color ' + ', '.join(valor) + ', '
-            descripcion = descripcion[:-2]
-            descripcion += '.'
+            descripcion = descripcion[:-2]   # Obtiene los últimos dos caracteres de la cadena
+            descripcion += '.\n'
+            # Información adicional del ave
+            descripcion += 'Como dato adicional, esta ave mide ' + str(contenido.get('tamanio')[0]) + ' cm y la puedes encontrar en lugares como ' + ''.join(contenido.get('habitat')) + '.\n'
+            descripcion += 'Además, se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
             print(descripcion)
             break
 elif(len(avesResultado) == 0):   # No se encontraron coincidencias

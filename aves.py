@@ -18,6 +18,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [54],
+        'habitat': ['áreas abiertas (valles, praderas y cultivos), bosques y cableado eléctrico paralelo a carreteras'],
+        'comida': ['roedores, aves, reptiles, anfibios y ocasionalmente carroña']
     },
     'cernicalo_americano': {
         'ojos': ['negros'],
@@ -38,6 +41,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [25],
+        'habitat': ['áreas abiertas (valles, praderas, cultivos), bordes de bosques, matorrales y ciudades'],
+        'comida': ['insectos, mamíferos pequeños, aves y reptiles']
     },
     'chara_de_san_blas_adulto': {
         'ojos': ['negros'],
@@ -58,6 +64,9 @@ aves = {
         'patas': ['amarillas'],
         'tarso': ['amarillo'],
         'rabadilla': ['azul'],
+        'tamanio': [32],
+        'habitat': ['bosques tropicales, manglares y matorrales costeros'],
+        'comida': ['insectos, arañas, pequeñas lagartijas, mamíferos, semillas y frutos']
     },
     'chipe_coronada_anaranjada': {
         'ojos': ['negros'],
@@ -78,6 +87,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [14],
+        'habitat': ['bosques de pino-encino, bosques tropicales, bosques de encino, vegetación riparia y zonas arboladas en asentamientos humanos'],
+        'comida': ['insectos y pequeños frutos']
     },
     'garceta_pie_dorado': {
         'ojos': ['amarillos'],
@@ -98,6 +110,9 @@ aves = {
         'patas': ['amarillas'],
         'tarso': ['negro'],
         'rabadilla': [],
+        'tamanio': [59],
+        'habitat': ['lagos, pantanos, charcas, playas y manglares'],
+        'comida': ['peces, insectos y crustáceos']
     },
     'garza_ganadera_no_reproductiva': {
         'ojos': ['amarillos'],
@@ -118,6 +133,9 @@ aves = {
         'patas': ['negras'],
         'tarso': ['negro'],
         'rabadilla': [],
+        'tamanio': [50],
+        'habitat': ['granjas, sembradíos y cuerpos de agua (lagos, pantanos)'],
+        'comida': ['insectos, huevos de otras aves y en ocasiones peces']
     },
     'gavilan_pecho_rufo': {
         'ojos': ['rojos'],
@@ -138,6 +156,9 @@ aves = {
         'patas': ['amarillas'],
         'tarso': ['amarillo'],
         'rabadilla': [],
+        'tamanio': [30],
+        'habitat': ['bosques templados (pino, pino-encino, encino)'],
+        'comida': ['aves pequeñas y roedores']
     },
     'loro_corona_lira': {
         'ojos': ['amarillos'],
@@ -158,6 +179,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [32],
+        'habitat': ['bosques tropicales (selvas), bordes de bosque de pinoencino y manglares'],
+        'comida': ['semillas']
     },
     'luis_bienteveo': {
         'ojos': ['negros', 'amarillos'],
@@ -178,6 +202,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [25],
+        'habitat': ['áreas abiertas y semiabiertas, arbolados dispersos, vegetación secundaria, borde y ecotonos de bosques'],
+        'comida': ['insectos grandes, lagartijas, ranas, pequeños mamíferos, peces, frutos y semillas']
     },
     'mosquero_de_hammond': {
         'ojos': ['negro'],
@@ -198,6 +225,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [14],
+        'habitat': ['bosques templados (bosque de pino, pino-encino)'],
+        'comida': ['insectos']
     },
     'mulato_azul': {
         'ojos': ['rojos'],
@@ -218,6 +248,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [25],
+        'habitat': ['sotobosques densos de bosques de pino y bosques de encino, matorrales y bosques espinosos (generalmente asociado con cuerpos de agua)'],
+        'comida': ['insectos y frutos']
     },
     'papamoscas_llanero': {
         'ojos': ['negros'],
@@ -238,6 +271,9 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [19],
+        'habitat': ['áreas abiertas áridas y semiáridas (planicies costeras, desiertos, matorrales y bosques con árboles dispersos)'],
+        'comida': ['insectos, arañas y en ocasiones frutos']
     },
     'tangara_capucha_roja': {
         'ojos': ['negros'],
@@ -258,5 +294,8 @@ aves = {
         'patas': [],
         'tarso': [],
         'rabadilla': [],
+        'tamanio': [18],
+        'habitat': ['bosques templados (pino, pino-encino, encino)'],
+        'comida': ['insectos y frutos pequeños']
     },
 }
