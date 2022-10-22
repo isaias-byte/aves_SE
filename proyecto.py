@@ -60,10 +60,10 @@ for ave, contenido in aves.items():
         ((preguntas.get('cola') in contenido.get('cola')) or (preguntas.get('cola') == 'x') or (preguntas.get('cola') == '')) and
         ((preguntas.get('espalda') in contenido.get('espalda')) or (preguntas.get('espalda') == 'x') or (preguntas.get('espalda') == '')) and
         ((preguntas.get('pecho') in contenido.get('pecho')) or (preguntas.get('pecho') == 'x') or (preguntas.get('pecho') == '')) and
-        ((preguntas.get('espalda') in contenido.get('patas')) or (preguntas.get('patas') == 'x') or (preguntas.get('patas') == '')) and
-        ((preguntas.get('espalda') in contenido.get('cabeza')) or (preguntas.get('cabeza') == 'x') or (preguntas.get('cabeza') == '')) and
-        ((preguntas.get('espalda') in contenido.get('cuerpo')) or (preguntas.get('cuerpo') == 'x') or (preguntas.get('cuerpo') == '')) and
-        ((preguntas.get('espalda') in contenido.get('frente')) or (preguntas.get('frente') == 'x') or (preguntas.get('frente') == ''))
+        ((preguntas.get('patas') in contenido.get('patas')) or (preguntas.get('patas') == 'x') or (preguntas.get('patas') == '')) and
+        ((preguntas.get('cabeza') in contenido.get('cabeza')) or (preguntas.get('cabeza') == 'x') or (preguntas.get('cabeza') == '')) and
+        ((preguntas.get('cuerpo') in contenido.get('cuerpo')) or (preguntas.get('cuerpo') == 'x') or (preguntas.get('cuerpo') == '')) and
+        ((preguntas.get('frente') in contenido.get('frente')) or (preguntas.get('frente') == 'x') or (preguntas.get('frente') == ''))
         ):
             avesResultado.append(ave)
 
