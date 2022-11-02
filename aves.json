@@ -1,0 +1,592 @@
+{
+    "aguililla_cola_roja": {
+        "ojos": [
+            "negros",
+            "amarillos"
+        ],
+        "pico": [
+            "gris",
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [],
+        "vientre": [
+            "blanco"
+        ],
+        "cabeza": [],
+        "garganta": [],
+        "espalda": [
+            "gris"
+        ],
+        "alas": [
+            "cafes",
+            "rojas",
+            "blancas"
+        ],
+        "cola": [
+            "roja"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            54
+        ],
+        "habitat": [
+            "\u00e1reas abiertas (valles, praderas y cultivos), bosques y cableado el\u00e9ctrico paralelo a carreteras"
+        ],
+        "comida": [
+            "roedores, aves, reptiles, anfibios y ocasionalmente carro\u00f1a"
+        ]
+    },
+    "cernicalo_americano": {
+        "ojos": [
+            "negros"
+        ],
+        "pico": [
+            "gris",
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [
+            "naranja"
+        ],
+        "auriculares": [],
+        "pecho": [],
+        "vientre": [],
+        "cabeza": [],
+        "garganta": [],
+        "espalda": [
+            "roja",
+            "negra"
+        ],
+        "alas": [
+            "azules"
+        ],
+        "cola": [
+            "roja"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            25
+        ],
+        "habitat": [
+            "\u00e1reas abiertas (valles, praderas, cultivos), bordes de bosques, matorrales y ciudades"
+        ],
+        "comida": [
+            "insectos, mam\u00edferos peque\u00f1os, aves y reptiles"
+        ]
+    },
+    "chara_de_san_blas_adulto": {
+        "ojos": [
+            "negros"
+        ],
+        "pico": [
+            "gris",
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [
+            "negro"
+        ],
+        "vientre": [
+            "negro"
+        ],
+        "cabeza": [
+            "negra"
+        ],
+        "garganta": [
+            "negra"
+        ],
+        "espalda": [
+            "azul"
+        ],
+        "alas": [
+            "azules"
+        ],
+        "cola": [
+            "azul",
+            "morada"
+        ],
+        "patas": [
+            "amarillas"
+        ],
+        "tarso": [
+            "amarillo"
+        ],
+        "rabadilla": [
+            "azul"
+        ],
+        "tamanio": [
+            32
+        ],
+        "habitat": [
+            "bosques tropicales, manglares y matorrales costeros"
+        ],
+        "comida": [
+            "insectos, ara\u00f1as, peque\u00f1as lagartijas, mam\u00edferos, semillas y frutos"
+        ]
+    },
+    "chipe_coronada_anaranjada": {
+        "ojos": [
+            "negros"
+        ],
+        "pico": [
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [
+            "amarillo"
+        ],
+        "vientre": [
+            "amarillo"
+        ],
+        "cabeza": [],
+        "garganta": [
+            "amarilla"
+        ],
+        "espalda": [],
+        "alas": [
+            "amarillas"
+        ],
+        "cola": [
+            "amarilla"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            14
+        ],
+        "habitat": [
+            "bosques de pino-encino, bosques tropicales, bosques de encino, vegetaci\u00f3n riparia y zonas arboladas en asentamientos humanos"
+        ],
+        "comida": [
+            "insectos y peque\u00f1os frutos"
+        ]
+    },
+    "garceta_pie_dorado": {
+        "ojos": [
+            "amarillos"
+        ],
+        "pico": [
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [
+            "amarillas",
+            "naranjas"
+        ],
+        "cuerpo": [
+            "blanco"
+        ],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [],
+        "vientre": [],
+        "cabeza": [],
+        "garganta": [],
+        "espalda": [],
+        "alas": [],
+        "cola": [],
+        "patas": [
+            "amarillas"
+        ],
+        "tarso": [
+            "negro"
+        ],
+        "rabadilla": [],
+        "tamanio": [
+            59
+        ],
+        "habitat": [
+            "lagos, pantanos, charcas, playas y manglares"
+        ],
+        "comida": [
+            "peces, insectos y crust\u00e1ceos"
+        ]
+    },
+    "garza_ganadera_no_reproductiva": {
+        "ojos": [
+            "amarillos"
+        ],
+        "pico": [
+            "amarillo"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [
+            "amarillas",
+            "naranjas"
+        ],
+        "cuerpo": [
+            "blanco"
+        ],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [],
+        "vientre": [],
+        "cabeza": [],
+        "garganta": [],
+        "espalda": [],
+        "alas": [],
+        "cola": [],
+        "patas": [
+            "negras"
+        ],
+        "tarso": [
+            "negro"
+        ],
+        "rabadilla": [],
+        "tamanio": [
+            50
+        ],
+        "habitat": [
+            "granjas, sembrad\u00edos y cuerpos de agua (lagos, pantanos)"
+        ],
+        "comida": [
+            "insectos, huevos de otras aves y en ocasiones peces"
+        ]
+    },
+    "gavilan_pecho_rufo": {
+        "ojos": [
+            "rojos"
+        ],
+        "pico": [
+            "gris",
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [
+            "grises",
+            "rojos"
+        ],
+        "pecho": [
+            "blanco"
+        ],
+        "vientre": [
+            "blanco"
+        ],
+        "cabeza": [],
+        "garganta": [],
+        "espalda": [
+            "gris"
+        ],
+        "alas": [
+            "grises"
+        ],
+        "cola": [
+            "gris"
+        ],
+        "patas": [
+            "amarillas"
+        ],
+        "tarso": [
+            "amarillo"
+        ],
+        "rabadilla": [],
+        "tamanio": [
+            30
+        ],
+        "habitat": [
+            "bosques templados (pino, pino-encino, encino)"
+        ],
+        "comida": [
+            "aves peque\u00f1as y roedores"
+        ]
+    },
+    "loro_corona_lira": {
+        "ojos": [
+            "amarillos"
+        ],
+        "pico": [
+            "amarillo"
+        ],
+        "antifaz": [],
+        "frente": [
+            "rojo"
+        ],
+        "loras": [],
+        "cuerpo": [
+            "verde"
+        ],
+        "nuca": [
+            "naranja"
+        ],
+        "auriculares": [
+            "azules",
+            "lilas"
+        ],
+        "pecho": [],
+        "vientre": [],
+        "cabeza": [],
+        "garganta": [],
+        "espalda": [
+            "roja",
+            "negra"
+        ],
+        "alas": [
+            "verdes"
+        ],
+        "cola": [],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            32
+        ],
+        "habitat": [
+            "bosques tropicales (selvas), bordes de bosque de pinoencino y manglares"
+        ],
+        "comida": [
+            "semillas"
+        ]
+    },
+    "luis_bienteveo": {
+        "ojos": [
+            "negros",
+            "amarillos"
+        ],
+        "pico": [
+            "negro"
+        ],
+        "antifaz": [
+            "negro"
+        ],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [
+            "amarillo"
+        ],
+        "vientre": [
+            "amarillo"
+        ],
+        "cabeza": [
+            "blanca"
+        ],
+        "garganta": [
+            "blanca"
+        ],
+        "espalda": [
+            "cafe"
+        ],
+        "alas": [
+            "rojas"
+        ],
+        "cola": [
+            "roja"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            25
+        ],
+        "habitat": [
+            "\u00e1reas abiertas y semiabiertas, arbolados dispersos, vegetaci\u00f3n secundaria, borde y ecotonos de bosques"
+        ],
+        "comida": [
+            "insectos grandes, lagartijas, ranas, peque\u00f1os mam\u00edferos, peces, frutos y semillas"
+        ]
+    },
+    "mosquero_de_hammond": {
+        "ojos": [
+            "negro"
+        ],
+        "pico": [
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [
+            "gris"
+        ],
+        "vientre": [],
+        "cabeza": [
+            "gris"
+        ],
+        "garganta": [
+            "gris"
+        ],
+        "espalda": [],
+        "alas": [],
+        "cola": [
+            "negra"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            14
+        ],
+        "habitat": [
+            "bosques templados (bosque de pino, pino-encino)"
+        ],
+        "comida": [
+            "insectos"
+        ]
+    },
+    "mulato_azul": {
+        "ojos": [
+            "rojos"
+        ],
+        "pico": [
+            "gris"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [
+            "negras"
+        ],
+        "cuerpo": [
+            "azul"
+        ],
+        "nuca": [],
+        "auriculares": [
+            "negros"
+        ],
+        "pecho": [
+            "azul"
+        ],
+        "vientre": [],
+        "cabeza": [
+            "azul"
+        ],
+        "garganta": [],
+        "espalda": [],
+        "alas": [],
+        "cola": [
+            "roja"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            25
+        ],
+        "habitat": [
+            "sotobosques densos de bosques de pino y bosques de encino, matorrales y bosques espinosos (generalmente asociado con cuerpos de agua)"
+        ],
+        "comida": [
+            "insectos y frutos"
+        ]
+    },
+    "papamoscas_llanero": {
+        "ojos": [
+            "negros"
+        ],
+        "pico": [
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [
+            "gris"
+        ],
+        "vientre": [],
+        "cabeza": [
+            "gris"
+        ],
+        "garganta": [
+            "gris"
+        ],
+        "espalda": [
+            "gris"
+        ],
+        "alas": [],
+        "cola": [
+            "negra"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            19
+        ],
+        "habitat": [
+            "\u00e1reas abiertas \u00e1ridas y semi\u00e1ridas (planicies costeras, desiertos, matorrales y bosques con \u00e1rboles dispersos)"
+        ],
+        "comida": [
+            "insectos, ara\u00f1as y en ocasiones frutos"
+        ]
+    },
+    "tangara_capucha_roja": {
+        "ojos": [
+            "negros"
+        ],
+        "pico": [
+            "negro"
+        ],
+        "antifaz": [],
+        "frente": [],
+        "loras": [],
+        "cuerpo": [],
+        "nuca": [],
+        "auriculares": [],
+        "pecho": [
+            "amarillo"
+        ],
+        "vientre": [
+            "amarillo"
+        ],
+        "cabeza": [
+            "amarilla"
+        ],
+        "garganta": [],
+        "espalda": [],
+        "alas": [
+            "negras"
+        ],
+        "cola": [
+            "negra"
+        ],
+        "patas": [],
+        "tarso": [],
+        "rabadilla": [],
+        "tamanio": [
+            18
+        ],
+        "habitat": [
+            "bosques templados (pino, pino-encino, encino)"
+        ],
+        "comida": [
+            "insectos y frutos peque\u00f1os"
+        ]
+    }
+}

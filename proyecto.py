@@ -1,4 +1,15 @@
 from aves import aves
+import json
+import random
+
+# Escribir el diccionario de aves a un archivo json
+# with open('aves.json', 'w', encoding="utf-8") as outfile:
+#     json.dump(aves, outfile)
+
+# Leer el archivo json de aves para convertirlo en un diccionario
+data = dict()
+with open('aves.json') as json_file:
+    data = json.load(json_file)   # Obtiene el contenido del archivo json y lo convierte a un diccionario
 
 print('\n')
 print('------------------------------------------')
@@ -9,30 +20,36 @@ print('\n')
 print('A continuación se te realizarán una serie de preguntas,')
 print('en caso de no saber la respuesta puedes responder con una "x"\n')
 
-print('\nPreguntas:')
-ojos = input('Color de ojos: ').lower()
-pico = input('Color del pico: ').lower()
-alas = input('Color de alas: ').lower()
-cola = input('Color de cola: ').lower()
-espalda = input('Color de espalda: ').lower()
-pecho = input('Color del pecho: ').lower()
-patas = ''
-cabeza = ''
-cuerpo = ''
-frente = ''
+# Arreglo de opciones de preguntas, el cual cuenta con las características de las aves
+opciones = [
+    'ojos',
+    'pico',
+    'alas',
+    'cola',
+    'espalda',
+    'pecho',
+]
 
+# Diccionario en el que se almacenan las respuestas proporcionadas por el usuario
 preguntas = {
-    'ojos': ojos,
-    'pico': pico,
-    'alas': alas,
-    'cola': cola,
-    'espalda': espalda,
-    'pecho': pecho,
-    'patas': patas,
-    'cabeza': cabeza,
-    'cuerpo': cuerpo,
-    'frente': frente,
+    'ojos': '',
+    'pico': '',
+    'alas': '',
+    'cola': '',
+    'espalda': '',
+    'pecho': '',
+    'patas': '',
+    'cabeza': '',
+    'cuerpo': '',
+    'frente': '',
 }
+
+# Preguntas aleatorias
+while len(opciones) > 0:
+    aleatorio = random.randint(0, len(opciones) - 1)   # Obtiene un número entre 0 y la longitud del arreglo
+    opcion = opciones.pop(aleatorio)                   # Se quita ese índice del arreglo de opciones de preguntas
+    res = input('Color de ' + opcion + ': ').lower()   # Guarda el resultado que el usuario captura en pantalla
+    preguntas[opcion] = res                            # Asigna el resultado al índice del diccionario de preguntas
 
 # Mostrar todas las aves
 # for ave, contenido in aves.items():
@@ -52,7 +69,7 @@ print('\n')
 avesResultado = list()
 
 # Búsqueda del ave
-for ave, contenido in aves.items():
+for ave, contenido in data.items():
     if (
         ((preguntas.get('ojos') in contenido.get('ojos')) or (preguntas.get('ojos') == 'x') or (preguntas.get('ojos') == '')) and
         ((preguntas.get('pico') in contenido.get('pico')) or (preguntas.get('pico') == 'x') or (preguntas.get('pico') == '')) and
@@ -101,8 +118,27 @@ if(len(avesResultado) == 1):   # Ave encontrada
             descripcion += 'Además, se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
             print(descripcion)
             break
+        
 elif(len(avesResultado) == 0):   # No se encontraron coincidencias
     print('No pudimos encontrar el ave que buscas :(\n')
+    print("¿Quieres añadir esta nueva?")
+    print("1) Sí")
+    print("2) No")
+    opc = input('Escoge una opción: ')
+    
+    while True:
+        if opc == '1':
+            # data.append()
+            # with open('aves.json', "w") as file:
+            #     json.dump(data, file)
+            # break
+            pass
+        elif opc == '2':
+            print('Nos vemos... :)')
+            break
+        else:
+            print('Escoge una opción válida')
+            
 elif(len(avesResultado) > 1):   # Se encontró más de una coincidencia
     print('La ave que buscas puede ser una de las siguientes:\n')
     for ave in avesResultado:
