@@ -1,4 +1,5 @@
 from aves import aves
+from funciones import *
 import json
 import random
 
@@ -28,20 +29,35 @@ opciones = [
     'cola',
     'espalda',
     'pecho',
+    # 'patas',
+    # 'cabeza',
+    # 'cuerpo',
+    # 'frente',
 ]
 
 # Diccionario en el que se almacenan las respuestas proporcionadas por el usuario
 preguntas = {
     'ojos': '',
     'pico': '',
+    'antifaz': '',
+    'frente': '',
+    'loras': '',
+    'cuerpo': '',
+    'nuca': '',
+    'auriculares': '',
+    'pecho': '',
+    'vientre': '',
+    'cabeza': '',
+    'garganta': '',
+    'espalda': '',
     'alas': '',
     'cola': '',
-    'espalda': '',
-    'pecho': '',
     'patas': '',
-    'cabeza': '',
-    'cuerpo': '',
-    'frente': '',
+    'tarso': '',
+    'rabadilla': '',
+    'tamanio': '',
+    'habitat': '',
+    'comida': ''
 }
 
 # Preguntas aleatorias
@@ -63,7 +79,8 @@ while len(opciones) > 0:
 # Mostrar todo lo que capturó el usuario
 print('\n\nTu búsqueda fue la siguiente:')
 for clave, valor in preguntas.items():
-    print(clave, ':', valor)
+    if valor != '':   # Obtiene solo las respuestas proporcionadas por el usuario
+        print(clave, ':', valor)
 print('\n')
 
 avesResultado = list()
@@ -86,12 +103,12 @@ for ave, contenido in data.items():
 
 # Posibles resultados
 if(len(avesResultado) == 1):   # Ave encontrada
-    for ave, contenido in aves.items():
+    for ave, contenido in data.items():
         if(avesResultado[0] == ave):   # Obtener los datos del ave desde el diccionario
             ave = ave.replace('_', ' ').title()   # Convertir el nombre del ave a mayúsculas y eliminar los guiones bajos
             print('El ave que buscas es:', ave)
             descripcion = 'El ave ' + ave + ' se caracteriza por tener '
-            for caracteristica, valor in contenido.items():        # Obtener las características del ave
+            for caracteristica, valor in contenido.items():   # Obtener las características del ave
                 if(preguntas.__contains__(caracteristica) and preguntas.get(caracteristica) != 'x' and preguntas.get(caracteristica) != ''):
                     colores = len(valor)   # Cantidad de colores en dicha característica
                     if colores == 2:
@@ -114,25 +131,29 @@ if(len(avesResultado) == 1):   # Ave encontrada
             descripcion = descripcion[:-2]   # Obtiene los últimos dos caracteres de la cadena
             descripcion += '.\n'
             # Información adicional del ave
-            descripcion += 'Como dato adicional, esta ave mide ' + str(contenido.get('tamanio')[0]) + ' cm y la puedes encontrar en lugares como ' + ''.join(contenido.get('habitat')) + '.\n'
-            descripcion += 'Además, se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
+            if len(contenido.get('tamanio')) != 0 or len(contenido.get('habitat')) != 0 or len(contenido.get('comida')) != 0:
+                descripcion += 'Como dato adicional, esta ave mide ' + str(contenido.get('tamanio')[0]) + ' cm y la puedes encontrar en lugares como ' + ''.join(contenido.get('habitat')) + '.\n'
+                descripcion += 'Además, se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
             print(descripcion)
             break
         
 elif(len(avesResultado) == 0):   # No se encontraron coincidencias
     print('No pudimos encontrar el ave que buscas :(\n')
-    print("¿Quieres añadir esta nueva?")
-    print("1) Sí")
-    print("2) No")
+    print('¿Quieres añadir esta nueva?')
+    print('1) Sí')
+    print('2) No')
     opc = input('Escoge una opción: ')
     
     while True:
         if opc == '1':
-            # data.append()
-            # with open('aves.json', "w") as file:
-            #     json.dump(data, file)
-            # break
-            pass
+            nuevaAve = input('\nNombre de la nueva ave: ')
+            nuevaAve = nuevaAve.replace(' ', '_').lower()   # Convertir el nombre del ave a minúsculas y poner guiones bajos entre cada espacio
+            respuestas = formatoRespuestas(preguntas)
+            data[nuevaAve] = respuestas
+            with open('aves.json', "w") as file:
+                json.dump(data, file)
+            print('Ave agregada exitosamente...')
+            break
         elif opc == '2':
             print('Nos vemos... :)')
             break
