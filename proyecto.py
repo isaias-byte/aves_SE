@@ -13,13 +13,14 @@ with open('aves.json') as json_file:
     data = json.load(json_file)   # Obtiene el contenido del archivo json y lo convierte a un diccionario
 
 print('\n')
-print('------------------------------------------')
-print('---------- CLASIFICADOR DE AVES ----------')
-print('------------------------------------------')
+print('-----------------------------------------------')
+print('----------- CLASIFICADOR DE AVES SEBC ---------')
+print('-----------------------------------------------')
 print('\n')
 
 print('A continuación se te realizarán una serie de preguntas,')
-print('en caso de no saber la respuesta puedes responder con una "x"\n')
+print('en caso de no saber la respuesta puedes responder con una "x"')
+print('o sino simplemente dando enter a la pregunta.\n')
 
 # Arreglo de opciones de preguntas, el cual cuenta con las características de las aves
 opciones = [
@@ -29,10 +30,10 @@ opciones = [
     'cola',
     'espalda',
     'pecho',
-    # 'patas',
-    # 'cabeza',
-    # 'cuerpo',
-    # 'frente',
+    'patas',
+    'cabeza',
+    'cuerpo',
+    'frente',
 ]
 
 # Diccionario en el que se almacenan las respuestas proporcionadas por el usuario
@@ -66,6 +67,10 @@ while len(opciones) > 0:
     opcion = opciones.pop(aleatorio)                   # Se quita ese índice del arreglo de opciones de preguntas
     res = input('Color de ' + opcion + ': ').lower()   # Guarda el resultado que el usuario captura en pantalla
     preguntas[opcion] = res                            # Asigna el resultado al índice del diccionario de preguntas
+    
+    avesResultado = buscarAve(preguntas, data)         # Busca al ave cada vez que se responde a una pregunta
+    if(len(avesResultado) == 1):                       # Ave encontrada
+        break
 
 # Mostrar todas las aves
 # for ave, contenido in aves.items():
@@ -79,27 +84,9 @@ while len(opciones) > 0:
 # Mostrar todo lo que capturó el usuario
 print('\n\nTu búsqueda fue la siguiente:')
 for clave, valor in preguntas.items():
-    if valor != '':   # Obtiene solo las respuestas proporcionadas por el usuario
+    if valor != '' and valor != 'x':   # Obtiene solo las respuestas proporcionadas por el usuario
         print(clave, ':', valor)
 print('\n')
-
-avesResultado = list()
-
-# Búsqueda del ave
-for ave, contenido in data.items():
-    if (
-        ((preguntas.get('ojos') in contenido.get('ojos')) or (preguntas.get('ojos') == 'x') or (preguntas.get('ojos') == '')) and
-        ((preguntas.get('pico') in contenido.get('pico')) or (preguntas.get('pico') == 'x') or (preguntas.get('pico') == '')) and
-        ((preguntas.get('alas') in contenido.get('alas')) or (preguntas.get('alas') == 'x') or (preguntas.get('alas') == '')) and
-        ((preguntas.get('cola') in contenido.get('cola')) or (preguntas.get('cola') == 'x') or (preguntas.get('cola') == '')) and
-        ((preguntas.get('espalda') in contenido.get('espalda')) or (preguntas.get('espalda') == 'x') or (preguntas.get('espalda') == '')) and
-        ((preguntas.get('pecho') in contenido.get('pecho')) or (preguntas.get('pecho') == 'x') or (preguntas.get('pecho') == '')) and
-        ((preguntas.get('patas') in contenido.get('patas')) or (preguntas.get('patas') == 'x') or (preguntas.get('patas') == '')) and
-        ((preguntas.get('cabeza') in contenido.get('cabeza')) or (preguntas.get('cabeza') == 'x') or (preguntas.get('cabeza') == '')) and
-        ((preguntas.get('cuerpo') in contenido.get('cuerpo')) or (preguntas.get('cuerpo') == 'x') or (preguntas.get('cuerpo') == '')) and
-        ((preguntas.get('frente') in contenido.get('frente')) or (preguntas.get('frente') == 'x') or (preguntas.get('frente') == ''))
-        ):
-            avesResultado.append(ave)
 
 # Posibles resultados
 if(len(avesResultado) == 1):   # Ave encontrada
@@ -130,10 +117,27 @@ if(len(avesResultado) == 1):   # Ave encontrada
                         
             descripcion = descripcion[:-2]   # Obtiene los últimos dos caracteres de la cadena
             descripcion += '.\n'
+            
             # Información adicional del ave
             if len(contenido.get('tamanio')) != 0 or len(contenido.get('habitat')) != 0 or len(contenido.get('comida')) != 0:
-                descripcion += 'Como dato adicional, esta ave mide ' + str(contenido.get('tamanio')[0]) + ' cm y la puedes encontrar en lugares como ' + ''.join(contenido.get('habitat')) + '.\n'
-                descripcion += 'Además, se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
+                descripcion += 'Como dato adicional, esta ave '
+                if len(contenido.get('tamanio')) != 0:
+                    descripcion += 'mide ' + str(contenido.get('tamanio')[0]) + ' cm'
+                    if len(contenido.get('habitat')) == 0:
+                        descripcion += '.\n'
+                
+                if len(contenido.get('habitat')) != 0:
+                    if len(contenido.get('tamanio')) != 0:
+                        descripcion += ' y la puedes encontrar en lugares como ' + ''.join(contenido.get('habitat')) + '.\n'
+                    else:
+                        descripcion += ' la puedes encontrar en lugares como ' + ''.join(contenido.get('habitat')) + '.\n'
+                
+                if(len(contenido.get('comida')) != 0):
+                    if(len(contenido.get('tamanio')) != 0 or len(contenido.get('habitat')) != 0):
+                        descripcion += 'Además, se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
+                    else:
+                        descripcion += ' se alimenta principalmente de ' + ''.join(contenido.get('comida')) + '.\n'
+            
             print(descripcion)
             break
         
@@ -148,14 +152,22 @@ elif(len(avesResultado) == 0):   # No se encontraron coincidencias
         if opc == '1':
             nuevaAve = input('\nNombre de la nueva ave: ')
             nuevaAve = nuevaAve.replace(' ', '_').lower()   # Convertir el nombre del ave a minúsculas y poner guiones bajos entre cada espacio
+            
+            # Captura de últimos datos para el alta del ave
+            print('\nPara finalizar el alta de esta nueva ave, ayúdanos contestando las siguientes preguntas.')
+            print('En caso de que no conozcas el dato, puedes omitirlas dando enter o escribiendo una "x".\n')
+            preguntas['tamanio'] = input('\n¿Qué tamaño tiene el ave en centímetros?: ')
+            preguntas['habitat'] = input('¿Dónde se puede ubicar a esta ave?: ')
+            preguntas['comida'] = input('¿Qué suele comer el ave?: ')
+            
             respuestas = formatoRespuestas(preguntas)
-            data[nuevaAve] = respuestas
+            data[nuevaAve] = respuestas   # Agrega el ave al diccionario de aves
             with open('aves.json', "w") as file:
-                json.dump(data, file)
-            print('Ave agregada exitosamente...')
+                json.dump(data, file)     # Escribe el ave capturada en el archivo json
+            print('\nAve agregada exitosamente...\n')
             break
         elif opc == '2':
-            print('Nos vemos... :)')
+            print('Nos vemos... :)\n')
             break
         else:
             print('Escoge una opción válida')
